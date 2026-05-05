@@ -3,160 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cita del día.exe - Windows 98</title>
+    <title>Cita del Día</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'MS Sans Serif', Arial, sans-serif;
-            background: transparent;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .window {
-            background: linear-gradient(to right, #000080, #1084d7);
-            border: 2px solid;
-            border-color: #dfdfdf #808080 #808080 #dfdfdf;
-            box-shadow: 1px 1px 0 0 #ffffff inset, -1px -1px 0 0 #808080 inset;
-            width: 100%;
-            max-width: 550px;
-            overflow: hidden;
-        }
-
-        .title-bar {
-            background: linear-gradient(to right, #000080, #1084d7);
-            color: white;
-            padding: 2px 2px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 11px;
-            font-weight: bold;
-            font-family: 'MS Sans Serif', Arial, sans-serif;
-        }
-
-        .title-text {
-            flex: 1;
-            padding-left: 4px;
-        }
-
-        .window-buttons {
-            display: flex;
-            gap: 2px;
-            padding-right: 2px;
-        }
-
-        .btn-minimize, .btn-maximize, .btn-close {
-            width: 16px;
-            height: 14px;
-            background: #c0c0c0;
-            border: 1px solid;
-            border-color: #dfdfdf #808080 #808080 #dfdfdf;
-            font-size: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: black;
-            font-weight: bold;
-        }
-
-        .btn-minimize:active, .btn-maximize:active, .btn-close:active {
-            border-color: #808080 #dfdfdf #dfdfdf #808080;
-        }
-
-        .window-content {
-            background: #c0c0c0;
-            padding: 8px;
-            border: 2px solid;
-            border-color: #dfdfdf #808080 #808080 #dfdfdf;
-        }
-
-        .quote-box {
-            background: white;
-            border: 2px solid;
-            border-color: #808080 #dfdfdf #dfdfdf #808080;
-            padding: 16px;
-            margin-bottom: 8px;
-            min-height: 140px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .quote-text {
-            font-family: 'MS Sans Serif', Arial, sans-serif;
-            font-size: 13px;
-            color: #000000;
-            line-height: 1.5;
-            margin-bottom: 12px;
-            font-style: italic;
-        }
-
-        .quote-author {
-            font-family: 'MS Sans Serif', Arial, sans-serif;
-            font-size: 11px;
-            color: #666666;
-            text-align: right;
-            font-weight: bold;
-        }
-
-        .quote-author::before {
-            content: '— ';
-        }
-
-        .date-info {
-            font-family: 'MS Sans Serif', Arial, sans-serif;
-            font-size: 10px;
-            color: #808080;
-            margin-bottom: 8px;
-        }
-
-        .buttons-bar {
-            display: flex;
-            justify-content: flex-end;
-            gap: 4px;
-        }
-
-        .btn {
-            background: #c0c0c0;
-            border: 2px solid;
-            border-color: #dfdfdf #808080 #808080 #dfdfdf;
-            padding: 3px 12px;
-            font-family: 'MS Sans Serif', Arial, sans-serif;
-            font-size: 11px;
-            cursor: pointer;
-            color: black;
-            min-width: 75px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .btn:active {
-            border-color: #808080 #dfdfdf #dfdfdf #808080;
-        }
-
-        @media (max-width: 600px) {
-            .window {
-                max-width: 100%;
-            }
-
-            .quote-text {
-                font-size: 12px;
-            }
-
-            .quote-box {
-                min-height: 120px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'MS Sans Serif', Arial, sans-serif; background: transparent; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .window { background: linear-gradient(to right, #000080, #1084d7); border: 2px solid; border-color: #dfdfdf #808080 #808080 #dfdfdf; box-shadow: 1px 1px 0 0 #ffffff inset, -1px -1px 0 0 #808080 inset; width: 100%; max-width: 550px; overflow: hidden; }
+        .title-bar { background: linear-gradient(to right, #000080, #1084d7); color: white; padding: 2px 2px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; }
+        .title-text { flex: 1; padding-left: 4px; }
+        .window-buttons { display: flex; gap: 2px; padding-right: 2px; }
+        .btn-minimize, .btn-maximize, .btn-close { width: 16px; height: 14px; background: #c0c0c0; border: 1px solid; border-color: #dfdfdf #808080 #808080 #dfdfdf; font-size: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: black; font-weight: bold; }
+        .window-content { background: #c0c0c0; padding: 8px; border: 2px solid; border-color: #dfdfdf #808080 #808080 #dfdfdf; }
+        .quote-box { background: white; border: 2px solid; border-color: #808080 #dfdfdf #dfdfdf #808080; padding: 16px; margin-bottom: 8px; min-height: 140px; display: flex; flex-direction: column; justify-content: center; }
+        .quote-text { font-family: 'MS Sans Serif', Arial, sans-serif; font-size: 13px; color: #000000; line-height: 1.5; margin-bottom: 12px; font-style: italic; }
+        .quote-author { font-family: 'MS Sans Serif', Arial, sans-serif; font-size: 11px; color: #666666; text-align: right; font-weight: bold; }
+        .quote-author::before { content: '— '; }
+        .date-info { font-family: 'MS Sans Serif', Arial, sans-serif; font-size: 10px; color: #808080; margin-bottom: 8px; }
+        .buttons-bar { display: flex; justify-content: flex-end; gap: 4px; }
+        .btn { background: #c0c0c0; border: 2px solid; border-color: #dfdfdf #808080 #808080 #dfdfdf; padding: 3px 12px; font-family: 'MS Sans Serif', Arial, sans-serif; font-size: 11px; cursor: pointer; color: black; min-width: 75px; text-align: center; font-weight: bold; }
+        .btn:active { border-color: #808080 #dfdfdf #dfdfdf #808080; }
     </style>
 </head>
 <body>
@@ -169,25 +33,22 @@
                 <div class="btn-close">✕</div>
             </div>
         </div>
-
         <div class="window-content">
             <div class="date-info" id="dateInfo">Hoy</div>
-            
             <div class="quote-box">
-                <div class="quote-text" id="quoteText">Cargando cita...</div>
+                <div class="quote-text" id="quoteText">Cita del día</div>
                 <div class="quote-author" id="quoteAuthor">Autor</div>
             </div>
-
             <div class="buttons-bar">
-                <button class="btn">🐬</button>
+                <button class="btn">Aceptar</button>
             </div>
         </div>
     </div>
 
     <script>
-        const quotes = [
-  { text: "No tengo por qué estar de acuerdo con lo que pienso", author: "Carlos Humberto Caszely" },
-  { text: "El único modo de hacer un gran trabajo es amar lo que haces.", author: "Steve Jobs" },
+const quotes = [
+  { text: "Yo nunca ví televisión porque es muy fome.", author: "Steve Jobs" },
+  { text: "No tengo por qué estar de acuerdo con lo que pienso.", author: "Carlos Caszely" },
   { text: "La perseverancia no es una carrera larga; es muchas carreras cortas, una tras otra.", author: "Walter Elliot" },
   { text: "No puedes cambiar el viento, pero puedes ajustar tus velas.", author: "Dolly Parton" },
   { text: "El futuro pertenece a aquellos que creen en la belleza de sus sueños.", author: "Eleanor Roosevelt" },
@@ -484,185 +345,24 @@
   { text: "No se trata de tener tiempo, sino de hacer tiempo para lo que importa.", author: "Anónimo" },
   { text: "Una meta escrita es un compromiso con tu futuro.", author: "Anónimo" },
   { text: "La dirección vale más que la velocidad.", author: "Anónimo" },
-  { text: "Lo que empieza con disciplina termina convirtiéndose en identidad.", author: "Anónimo" },
-  { text: "No abandones en un mal día una meta que nació en un buen momento.", author: "Anónimo" },
-  { text: "El cansancio pasa; el orgullo de haberlo intentado permanece.", author: "Anónimo" },
-  { text: "A veces la diferencia entre sueño y logro es una agenda.", author: "Anónimo" },
-  { text: "El éxito no se encuentra; se construye con decisiones repetidas.", author: "Anónimo" },
-  { text: "Lo que parece lento puede estar echando raíces.", author: "Anónimo" },
-  { text: "La ambición sin paciencia se convierte en ansiedad.", author: "Anónimo" },
-  { text: "La paciencia sin acción se convierte en espera eterna.", author: "Anónimo" },
-  { text: "El equilibrio no es hacer todo, sino cuidar lo esencial.", author: "Anónimo" },
-  { text: "No te compares con quien va en otro capítulo.", author: "Anónimo" },
-  { text: "La mejora personal empieza cuando dejas de culpar al contexto.", author: "Anónimo" },
-  { text: "Ser constante también es una forma de talento.", author: "Anónimo" },
-  { text: "Las excusas explican; las acciones transforman.", author: "Anónimo" },
-  { text: "Una vida con propósito se construye en decisiones concretas.", author: "Anónimo" },
-  { text: "No todo cambio se siente bien al principio.", author: "Anónimo" },
-  { text: "Cuando cambias tu rutina, cambias tu resultado.", author: "Anónimo" },
-  { text: "Haz menos promesas y cumple más acciones.", author: "Anónimo" },
-  { text: "No subestimes el poder de repetir algo bueno todos los días.", author: "Anónimo" },
-  { text: "La mejor estrategia es hacer lo correcto con suficiente frecuencia.", author: "Anónimo" },
-  { text: "La confianza crece cuando tus acciones y tus palabras coinciden.", author: "Anónimo" },
-  { text: "No confundas pausa con rendición.", author: "Anónimo" },
-  { text: "Descansar no es abandonar; es prepararte para continuar.", author: "Anónimo" },
-  { text: "El enfoque transforma el esfuerzo en avance.", author: "Anónimo" },
-  { text: "El progreso real suele ser aburrido antes de ser admirable.", author: "Anónimo" },
-  { text: "La vida cambia cuando eliges responsabilidad sobre comodidad.", author: "Anónimo" },
-  { text: "Cada día trae una oportunidad pequeña de ser más fiel a ti.", author: "Anónimo" },
-  { text: "El liderazgo no es un cargo; es una conducta.", author: "Anónimo" },
-  { text: "La humildad abre puertas que el orgullo ni siquiera ve.", author: "Anónimo" },
-  { text: "Escuchar bien también es una forma de inteligencia.", author: "Anónimo" },
-  { text: "El respeto se demuestra mejor en desacuerdo.", author: "Anónimo" },
-  { text: "La grandeza se mide por cómo tratas a quien no puede darte nada.", author: "Anónimo" },
-  { text: "El servicio convierte el talento en impacto.", author: "Anónimo" },
-  { text: "Un equipo fuerte se construye con confianza, no con ruido.", author: "Anónimo" },
-  { text: "La colaboración multiplica lo que el ego limita.", author: "Anónimo" },
-  { text: "La comunicación clara evita problemas caros.", author: "Anónimo" },
-  { text: "Decir la verdad con respeto también es una forma de cuidado.", author: "Anónimo" },
-  { text: "La honestidad puede incomodar, pero siempre ordena.", author: "Anónimo" },
-  { text: "La integridad es hacer lo correcto aunque nadie esté mirando.", author: "C. S. Lewis" },
-  { text: "El carácter es lo que eres en la oscuridad.", author: "Dwight L. Moody" },
-  { text: "La forma de hacer las cosas pequeñas es la forma de hacer las grandes.", author: "Anónimo" },
-  { text: "Tu reputación viaja más lejos que tus palabras.", author: "Anónimo" },
-  { text: "La confianza tarda años en construirse y segundos en romperse.", author: "Anónimo" },
-  { text: "No hay éxito real sin valores que lo sostengan.", author: "Anónimo" },
-  { text: "Sé firme con tus metas y flexible con tus métodos.", author: "Anónimo" },
-  { text: "La claridad es una forma de generosidad.", author: "Anónimo" },
-  { text: "Un buen líder no crea seguidores; crea más líderes.", author: "Tom Peters" },
-  { text: "La innovación nace de decir no a mil cosas.", author: "Steve Jobs" },
-  { text: "El cambio es inevitable; el crecimiento es opcional.", author: "John C. Maxwell" },
-  { text: "Un líder es alguien que conoce el camino, recorre el camino y muestra el camino.", author: "John C. Maxwell" },
-  { text: "La gente compra al líder antes de comprar la visión.", author: "John C. Maxwell" },
-  { text: "El secreto de tu éxito está determinado por tu agenda diaria.", author: "John C. Maxwell" },
-  { text: "No se trata de posición; se trata de disposición.", author: "John C. Maxwell" },
-  { text: "La visión sin acción es solo un sueño.", author: "Joel A. Barker" },
-  { text: "La acción sin visión solo pasa el tiempo.", author: "Joel A. Barker" },
-  { text: "La visión con acción puede cambiar el mundo.", author: "Joel A. Barker" },
-  { text: "La mejor manera de encontrarte es perderte en el servicio a los demás.", author: "Mahatma Gandhi" },
-  { text: "Nadie se ha hecho pobre por dar.", author: "Ana Frank" },
-  { text: "Qué maravilloso es que nadie tenga que esperar para empezar a mejorar el mundo.", author: "Ana Frank" },
-  { text: "Donde hay amor e inspiración, no creo que puedas equivocarte.", author: "Ella Fitzgerald" },
-  { text: "No importa de dónde vienes; lo importante es hacia dónde vas.", author: "Ella Fitzgerald" },
-  { text: "La pasión es energía.", author: "Oprah Winfrey" },
-  { text: "Convierte tus heridas en sabiduría.", author: "Oprah Winfrey" },
-  { text: "Haz lo único que crees que no puedes hacer.", author: "Oprah Winfrey" },
-  { text: "La suerte es preparación encontrándose con oportunidad.", author: "Oprah Winfrey" },
-  { text: "No puedes vivir una vida valiente sin decepcionar a algunas personas.", author: "Oprah Winfrey" },
-  { text: "La pregunta no es quién me va a dejar, sino quién va a detenerme.", author: "Ayn Rand" },
-  { text: "La vida se trata de crear y vivir experiencias que valgan la pena compartir.", author: "Steve Jobs" },
-  { text: "La creatividad requiere coraje.", author: "Henri Matisse" },
-  { text: "No esperes inspiración; sal a buscarla trabajando.", author: "Anónimo" },
-  { text: "El arte de avanzar consiste en saber qué dejar atrás.", author: "Anónimo" },
-  { text: "La innovación empieza cuando alguien se atreve a preguntar por qué no.", author: "Anónimo" },
-  { text: "Lo nuevo siempre parece extraño antes de parecer obvio.", author: "Anónimo" },
-  { text: "Crear es confiar en algo que todavía no existe.", author: "Anónimo" },
-  { text: "La imaginación es el ensayo general de la realidad.", author: "Anónimo" },
-  { text: "Las ideas crecen cuando se comparten.", author: "Anónimo" },
-  { text: "No toda respuesta llega pensando; algunas llegan haciendo.", author: "Anónimo" },
-  { text: "La curiosidad abre puertas que la certeza mantiene cerradas.", author: "Anónimo" },
-  { text: "El error es una señal de que estás explorando.", author: "Anónimo" },
-  { text: "Quien teme equivocarse, también teme descubrir.", author: "Anónimo" },
-  { text: "La creatividad convierte límites en materia prima.", author: "Anónimo" },
-  { text: "Una buena idea necesita valor para convertirse en realidad.", author: "Anónimo" },
-  { text: "El mundo cambia cuando alguien se atreve a imaginar otra forma.", author: "Anónimo" },
-  { text: "El progreso empieza con una pregunta incómoda.", author: "Anónimo" },
-  { text: "No hay innovación sin permiso para fallar.", author: "Anónimo" },
-  { text: "El pensamiento grande requiere paciencia con los detalles pequeños.", author: "Anónimo" },
-  { text: "La originalidad no es ser diferente por fuerza, sino ser fiel a una visión.", author: "Anónimo" },
-  { text: "La inspiración visita a quienes tienen la puerta abierta y las manos ocupadas.", author: "Anónimo" },
-  { text: "No necesitas una idea perfecta, necesitas una idea que puedas empezar.", author: "Anónimo" },
-  { text: "Todo logro fue primero una idea que parecía frágil.", author: "Anónimo" },
-  { text: "La mente que pregunta permanece joven.", author: "Anónimo" },
-  { text: "El aprendizaje continuo es una rebelión contra la obsolescencia.", author: "Anónimo" },
-  { text: "La duda inteligente es el inicio de mejores respuestas.", author: "Anónimo" },
-  { text: "La creatividad no aparece al evitar límites, sino al trabajar con ellos.", author: "Anónimo" },
-  { text: "Haz de la incertidumbre un laboratorio, no una prisión.", author: "Anónimo" },
-  { text: "La belleza del comienzo es que todavía todo puede tomar forma.", author: "Anónimo" },
-  { text: "El amor por aprender convierte cada día en una posibilidad.", author: "Anónimo" },
-  { text: "La sabiduría empieza cuando admites que aún puedes aprender.", author: "Anónimo" },
-  { text: "El éxito sin propósito se siente vacío.", author: "Anónimo" },
-  { text: "La riqueza más grande es una mente tranquila.", author: "Anónimo" },
-  { text: "La verdadera libertad empieza en el dominio de uno mismo.", author: "Anónimo" },
-  { text: "Lo que posees no define lo que eres.", author: "Anónimo" },
-  { text: "La vida sencilla deja espacio para lo profundo.", author: "Anónimo" },
-  { text: "La alegría no siempre llega cuando todo está bien; a veces llega cuando eliges mirar mejor.", author: "Anónimo" },
-  { text: "El presente es pequeño, pero contiene toda tu vida.", author: "Anónimo" },
-  { text: "La gratitud no cambia lo que tienes; cambia cómo lo recibes.", author: "Anónimo" },
-  { text: "La paz no es ausencia de problemas, sino presencia de perspectiva.", author: "Anónimo" },
-  { text: "No todas las tormentas vienen a destruir; algunas vienen a limpiar el camino.", author: "Anónimo" },
-  { text: "Lo que aceptas deja de dominarte.", author: "Anónimo" },
-  { text: "La vida se vuelve más ligera cuando sueltas lo que no te corresponde cargar.", author: "Anónimo" },
-  { text: "Agradece lo suficiente mientras trabajas por lo siguiente.", author: "Anónimo" },
-  { text: "El alma descansa donde hay verdad.", author: "Anónimo" },
-  { text: "La plenitud no es llegar a todo, sino habitar mejor lo que ya tienes.", author: "Anónimo" },
-  { text: "La felicidad crece cuando dejas de perseguir la aprobación.", author: "Anónimo" },
-  { text: "La comparación roba alegría y claridad.", author: "Anónimo" },
-  { text: "Ser tú mismo es una tarea diaria.", author: "Anónimo" },
-  { text: "No vivas para impresionar; vive para expresar lo verdadero.", author: "Anónimo" },
-  { text: "La autenticidad atrae lo que no tienes que fingir para conservar.", author: "Anónimo" },
-  { text: "Tu historia no termina en el capítulo más difícil.", author: "Anónimo" },
-  { text: "La sanación empieza cuando dejas de negar lo que duele.", author: "Anónimo" },
-  { text: "Ser fuerte también significa pedir ayuda.", author: "Anónimo" },
-  { text: "Lo que sientes merece atención, no juicio.", author: "Anónimo" },
-  { text: "La vulnerabilidad es el precio de las conexiones verdaderas.", author: "Brené Brown" },
-  { text: "La valentía empieza apareciendo y dejándonos ver.", author: "Brené Brown" },
-  { text: "Hablar de nuestras historias difíciles puede convertirlas en fuerza.", author: "Brené Brown" },
-  { text: "La imperfección no es insuficiencia; es parte de ser humano.", author: "Brené Brown" },
-  { text: "La autenticidad es la práctica diaria de soltar quien creemos que debemos ser.", author: "Brené Brown" },
-  { text: "La esperanza es una disciplina.", author: "Mariame Kaba" },
-  { text: "Haz lo que puedas hasta que sepas más; cuando sepas más, hazlo mejor.", author: "Maya Angelou" },
-  { text: "El amor reconoce no barreras.", author: "Maya Angelou" },
-  { text: "La vida ama a quien se atreve a vivirla.", author: "Maya Angelou" },
-  { text: "La belleza empieza en el momento en que decides ser tú misma.", author: "Coco Chanel" },
-  { text: "Para ser irremplazable, hay que buscar siempre ser diferente.", author: "Coco Chanel" },
-  { text: "El acto más valiente sigue siendo pensar por uno mismo en voz alta.", author: "Coco Chanel" },
-  { text: "No nacemos mujer, llegamos a serlo.", author: "Simone de Beauvoir" },
-  { text: "La libertad es querer que los demás también sean libres.", author: "Simone de Beauvoir" },
-  { text: "Una persona no puede estar cómoda sin su propia aprobación.", author: "Mark Twain" },
-  { text: "La mayor aventura que puedes tomar es vivir la vida de tus sueños.", author: "Oprah Winfrey" },
-  { text: "El propósito de la vida no es encontrarte, sino crearte.", author: "George Bernard Shaw" },
-  { text: "La vida no se trata de encontrarse a uno mismo, sino de crearse a uno mismo.", author: "George Bernard Shaw" },
-  { text: "El progreso es imposible sin cambio.", author: "George Bernard Shaw" },
-  { text: "Los que no pueden cambiar de opinión no pueden cambiar nada.", author: "George Bernard Shaw" },
-  { text: "No dejamos de jugar porque envejecemos; envejecemos porque dejamos de jugar.", author: "George Bernard Shaw" },
-  { text: "La vida es realmente simple, pero insistimos en hacerla complicada.", author: "Confucio" },
-  { text: "Elige la bondad siempre que puedas; siempre puedes.", author: "Dalái Lama" },
-  { text: "Mi religión es muy simple: mi religión es la bondad.", author: "Dalái Lama" },
-  { text: "La paz interior es la clave; si tienes paz interior, los problemas externos no afectan tu sentido profundo.", author: "Dalái Lama" },
-  { text: "El propósito de nuestras vidas es ser felices.", author: "Dalái Lama" },
-  { text: "Comparte tu conocimiento; es una manera de alcanzar la inmortalidad.", author: "Dalái Lama" },
-  { text: "Juzga tu éxito por lo que tuviste que renunciar para conseguirlo.", author: "Dalái Lama" },
-  { text: "Cuando pierdas, no pierdas la lección.", author: "Dalái Lama" },
-  { text: "El amor y la compasión son necesidades, no lujos.", author: "Dalái Lama" },
-  { text: "La mente tranquila trae fuerza interior y confianza.", author: "Dalái Lama" }
-        ];
+  { text: "Lo que empieza con disciplina termina convirtiéndose en identidad.", author: "Anónimo" }
+];
 
-        function getQuoteOfDay() {
-            const today = new Date();
-            const startDate = new Date('2026-05-04');
-            const dayNumber = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-            const quoteIndex = dayNumber % quotes.length;
-            return quotes[quoteIndex];
-        }
+function loadQuote() {
+  const today = new Date();
+  const startDate = new Date('2026-05-04');
+  const dayNumber = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+  const quoteIndex = dayNumber % quotes.length;
+  const quote = quotes[quoteIndex];
+  
+  document.getElementById('quoteText').textContent = quote.text;
+  document.getElementById('quoteAuthor').textContent = quote.author;
+  
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('dateInfo').textContent = new Date().toLocaleDateString('es-ES', options);
+}
 
-        function formatDate(date) {
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            return date.toLocaleDateString('es-ES', options);
-        }
-
-        function loadQuote() {
-            const quote = getQuoteOfDay();
-            document.getElementById('quoteText').textContent = quote.text;
-            document.getElementById('quoteAuthor').textContent = quote.author;
-            document.getElementById('dateInfo').textContent = formatDate(new Date());
-        }
-
-        // Ejecutar inmediatamente
-        loadQuote();
-        
-        // También ejecutar cuando cargue el DOM
-        document.addEventListener('DOMContentLoaded', loadQuote);
+loadQuote();
     </script>
 </body>
 </html>
